@@ -36,6 +36,7 @@
   <meta name="twitter:image" content="https://www.tradeinn.com/f/13676/136761018/scubapro-go-travel-diving-fins.jpg" />
 
   <style>
+    /* (оставляем стили как в предыдущем коде) */
     body {
       background-color: #f7fafa;
       font-family: Arial, sans-serif;
@@ -211,7 +212,7 @@
     </div>
 
     <!-- Кнопка -->
-    <a id="buy-btn" href="https://tnkdbf.tradeinn.com/ts/i5534887/tsc?typ=r&amc=con.blbn.524297.533805.14119786&smc=review-gofin_white&rmd=3&trg=https%3A%2F%2Fwww.tradeinn.com%2Fdiveinn%2Fen%2Fscubapro-go-travel-diving-fins%2F136761018%2Fp" target="_blank" class="btn-buy" onclick="fbq('track', 'Lead'); fbq('trackCustom', 'EquipmentLead');">
+    <a id="buy-btn" href="https://tnkdbf.tradeinn.com/ts/i5534887/tsc?typ=r&amc=con.blbn.524297.533805.14119786&smc=review-gofin_white&rmd=3&trg=https%3A%2F%2Fwww.tradeinn.com%2Fdiveinn%2Fen%2Fscubapro-go-travel-diving-fins%2F136761018%2Fp" target="_blank" class="btn-buy" onclick="onBuyClick();">
       Купить на DiveInn
     </a>
 
@@ -314,8 +315,14 @@
 
   // Отслеживание задержанного просмотра страницы
   setTimeout(() => {
-    fbq('trackCustom', 'EquipmentPageView7s');
+    fbq('trackCustom', 'ViewContent_Equip_Review_7s');
   }, 7000);
+
+  // Функция для отслеживания клика по кнопке купить
+  function onBuyClick() {
+    fbq('track', 'Lead');
+    fbq('trackCustom', 'Checkout_DiveInn');
+  }
 </script>
 </body>
 </html>
