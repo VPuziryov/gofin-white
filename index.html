@@ -36,7 +36,6 @@
   <meta name="twitter:image" content="https://www.tradeinn.com/f/13676/136761018/scubapro-go-travel-diving-fins.jpg" />
 
   <style>
-    /* (оставляем стили как в предыдущем коде) */
     body {
       background-color: #f7fafa;
       font-family: Arial, sans-serif;
@@ -59,6 +58,7 @@
       box-shadow: 0 0 6px rgba(0,0,0,0.1);
       display: block;
       margin-bottom: 20px;
+      cursor: default; /* не кликабельный */
     }
     .lang-switch {
       text-align: center;
@@ -89,7 +89,7 @@
       display: block;
       max-width: 200px;
       margin: 0 auto 8px auto;
-      cursor: default;
+      cursor: default; /* не кликабельное */
     }
     .product-name {
       font-size: 15px;
@@ -114,20 +114,23 @@
     .btn-buy {
       display: block;
       width: 100%;
-      max-width: 300px;
-      margin: 0 auto 28px auto;
-      padding: 12px 0;
+      max-width: 350px;
+      margin: 20px auto 35px auto;
+      padding: 15px 0;
       background-color: #007bff;
       color: white;
       font-weight: 700;
+      font-size: 17px;
       text-align: center;
-      border-radius: 6px;
+      border-radius: 8px;
       text-decoration: none;
-      box-shadow: 0 0 8px rgba(0,123,255,0.7);
-      transition: background-color 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0,123,255,0.5);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      cursor: pointer;
     }
     .btn-buy:hover {
       background-color: #0056b3;
+      transform: scale(1.05);
     }
     .footer {
       border-top: 1px solid #ddd;
@@ -149,28 +152,31 @@
     .footer a:hover {
       text-decoration: underline;
     }
-    .share-block {
-      text-align: center;
-      font-weight: 700;
-      font-size: 1.1em;
-      margin-top: 30px;
-      display: none;
-    }
-    .share-block.active {
-      display: block;
-    }
     .lang-content {
       display: none;
     }
     .lang-content.active {
       display: block;
     }
+    /* Нижний кликабельный баннер */
+    .bottom-banner {
+      text-align: center;
+      margin: 30px 0 0 0;
+    }
+    .bottom-banner img {
+      max-width: 720px;
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
   <div class="container">
 
-    <!-- Баннер без ссылки -->
+    <!-- Верхний баннер без ссылки -->
     <img src="https://res.cloudinary.com/i19s/image/upload/dpr_auto,f_auto,fl_lossy,q_50,w_auto/v1/prod_creatives/net_253/adv_77651/cr_11e60986-dea0-50ec-a64d-e2f92857ceda" alt="DiveInn Banner" class="banner" />
 
     <!-- Переключатель языка -->
@@ -216,6 +222,13 @@
       Купить на DiveInn
     </a>
 
+    <!-- Нижний кликабельный баннер -->
+    <div class="bottom-banner">
+      <a href="https://tnkdbf.tradeinn.com/ts/i5534887/tsc?typ=r&amc=con.blbn.524297.533805.14119786&smc=review-gofin_white&rmd=3&trg=https%3A%2F%2Fwww.tradeinn.com%2Fdiveinn%2Fen%2Fscubapro-go-travel-diving-fins%2F136761018%2Fp" target="_blank" rel="sponsored" onclick="fbq('track', 'Lead'); fbq('trackCustom', 'Checkout_DiveInn');">
+        <img src="https://res.cloudinary.com/i19s/image/upload/dpr_auto,f_auto,fl_lossy,q_50,w_auto/v1/prod_creatives/net_253/adv_77651/cr_11e60986-dea0-50ec-a64d-e2f92857ceda" alt="DiveInn Banner" />
+      </a>
+    </div>
+
     <!-- Подпись -->
     <div class="footer">
       <span id="footer-line1-ru" class="footer-line lang-content active">
@@ -233,22 +246,6 @@
       </span>
     </div>
 
-    <!-- Шеринг -->
-    <div id="share-ru" class="share-block lang-content active">
-      <p>Поделиться обзором:</p>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https://gofin-white.iscuba.online" target="_blank" rel="noopener noreferrer">Facebook</a> |
-      <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://gofin-white.iscuba.online" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
-      <a href="https://t.me/share/url?url=https://gofin-white.iscuba.online" target="_blank" rel="noopener noreferrer">Telegram</a> |
-      <a href="https://wa.me/?text=https://gofin-white.iscuba.online" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-    </div>
-    <div id="share-en" class="share-block lang-content">
-      <p>Share this review:</p>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https://gofin-white-en.iscuba.online" target="_blank" rel="noopener noreferrer">Facebook</a> |
-      <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://gofin-white-en.iscuba.online" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
-      <a href="https://t.me/share/url?url=https://gofin-white-en.iscuba.online" target="_blank" rel="noopener noreferrer">Telegram</a> |
-      <a href="https://wa.me/?text=https://gofin-white-en.iscuba.online" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-    </div>
-
   </div>
 
 <script>
@@ -262,9 +259,6 @@
 
       document.getElementById('content-ru').classList.add('active');
       document.getElementById('content-en').classList.remove('active');
-
-      document.getElementById('share-ru').classList.add('active');
-      document.getElementById('share-en').classList.remove('active');
 
       document.getElementById('prod-name-ru').classList.add('active');
       document.getElementById('prod-name-en').classList.remove('active');
@@ -280,15 +274,13 @@
       const btn = document.getElementById('buy-btn');
       btn.textContent = 'Купить на DiveInn';
       btn.href = 'https://tnkdbf.tradeinn.com/ts/i5534887/tsc?typ=r&amc=con.blbn.524297.533805.14119786&smc=review-gofin_white&rmd=3&trg=https%3A%2F%2Fwww.tradeinn.com%2Fdiveinn%2Fen%2Fscubapro-go-travel-diving-fins%2F136761018%2Fp';
+
     } else {
       btnEn.classList.add('active');
       btnRu.classList.remove('active');
 
       document.getElementById('content-en').classList.add('active');
       document.getElementById('content-ru').classList.remove('active');
-
-      document.getElementById('share-en').classList.add('active');
-      document.getElementById('share-ru').classList.remove('active');
 
       document.getElementById('prod-name-en').classList.add('active');
       document.getElementById('prod-name-ru').classList.remove('active');
@@ -313,12 +305,12 @@
   // Изначальное состояние
   activateLang('ru');
 
-  // Отслеживание задержанного просмотра страницы
+  // Отслеживание задержанного просмотра страницы (7 секунд)
   setTimeout(() => {
     fbq('trackCustom', 'ViewContent_Equip_Review_7s');
   }, 7000);
 
-  // Функция для отслеживания клика по кнопке купить
+  // Обработчик клика по кнопке Купить
   function onBuyClick() {
     fbq('track', 'Lead');
     fbq('trackCustom', 'Checkout_DiveInn');
